@@ -121,4 +121,4 @@ if (!queue.isPlaying)
 }
 });
 
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN || process.env.DISCORD_TOKEN);
