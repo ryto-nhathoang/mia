@@ -1,16 +1,10 @@
-require('dotenv').config();
+import 'dotenv/config';
+import { PlayerManager } from 'ziplayer';
+import { Client, GatewayIntentBits } from 'discord.js';
+import { SoundCloudPlugin, SpotifyPlugin, YouTubePlugin } from '@ziplayer/plugin';
+import { InfinityPlugin } from '@ziplayer/infinity';
 
-const {PlayerManager} = require("ziplayer");
-const {Client, GatewayIntentBits} = require("discord.js");
-
-const {
-    SoundCloudPlugin,
-    SpotifyPlugin,
-    YouTubePlugin,
-} = require("@ziplayer/plugin");
-const {InfinityPlugin} = require("@ziplayer/infinity");
-
-const prefix ="!";
+const prefix = "!";
 
 const client = new Client({
     intents: [
@@ -31,7 +25,7 @@ const player = new PlayerManager({
 });
 
 player.on("trackStart", (queue, track) => {
-    queue.userdata?.channel?.send(`Started playing: **${track.title}**`);
+    // Code xử lý sự kiện của bạn ở đây
 });
 player.on("trackAdd", (queue, track) => {
     queue.userdata?.channel?.send(`Added to queue: **${track.title}**`);
