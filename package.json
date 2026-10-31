@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "dependencies": {
     "@discordjs/voice": "^0.19.2",
     "@ziplayer/extension": "^1.0.1",
@@ -15,10 +16,4 @@
   "scripts": {
     "start": "node index.js"
   }
-  {
-  "type": "module",
-  "dependencies": {
-    ...
-  }
-}
 }
