@@ -3,7 +3,6 @@ import { PlayerManager } from 'ziplayer';
 import { Client, GatewayIntentBits } from 'discord.js';
 import { SoundCloudPlugin, SpotifyPlugin, YouTubePlugin } from '@ziplayer/plugin';
 import { InfinityPlugin } from '@ziplayer/infinity';
-
 const prefix = "!";
 
 const client = new Client({
